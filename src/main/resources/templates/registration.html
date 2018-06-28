@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Welcome</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="/resources/static/css/animate.css"/>
+    <style>
+        body, h1, h2, h3, h4, h5 {
+            font-family: "Raleway", sans-serif
+        }
+    </style>
+</head>
+
+<body class="w3-light-grey animated fadeIn">
+
+<!--<div th:include="~{index.html :: navbar}"></div>-->
+
+<div class="w3-content" style="width: 2000px;">
+    <div class="w3-card-4 w3-white" style="max-width: 55%;margin: 2% auto auto;border-radius: 7px;">
+        <header class="w3-container w3-center w3-padding-32">
+            <h1><b>Sample registration for beatDev</b></h1>
+            <p> You can create <span class="w3-tag">your account</span> below in form</p>
+        </header>
+
+        <div style="margin: 10px;text-align: center">
+            <form th:action="@{/registration}" th:object="${user}" enctype="multipart/form-data" method="post">
+
+                <input class="w3-input" formenctype="multipart/form-data" type="file" name="file" />
+
+                <input class="w3-input" value="" placeholder="username" type="text" th:field="*{username}"
+                       id="username"/>
+                <span style="float: right;" id="dataUsername"></span>
+
+                <input class="w3-input" value="" placeholder="mail" type="text"  th:field="*{mail}"
+                       id="mail"/>
+
+                <input class="w3-input" type="password" placeholder="password"  th:field="*{password}"
+                       id="password"/>
+                <span style="float: right;" id="dataPassword"></span>
+
+                <input class="w3-input" type="password" placeholder="confirm password" th:field="*{submitPassword}"
+                       id="againPassword"/>
+                <span style="float: right;" id="submitPassword"></span>
+
+
+                <input value="Create account" class="w3-btn w3-white w3-border w3-border-blue w3-round" style=";margin-top:2%;" type="submit">
+
+                <a href="/auth"><h6>Already have account?</h6></a>
+
+            </form>
+
+        </div>
+        <br/>
+        <br/>
+    </div>
+
+</div>
+<script>
+
+    $(document).ready(function () {
+        $('input[name=username]').val("");
+    })
+</script>
+
+</body>
+</html>
