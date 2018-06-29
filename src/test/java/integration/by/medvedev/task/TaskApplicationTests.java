@@ -1,4 +1,4 @@
-package by.medvedev.task;
+package integration.by.medvedev.task;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

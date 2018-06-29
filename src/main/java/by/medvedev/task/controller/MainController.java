@@ -39,7 +39,7 @@ public class MainController {
 
     @GetMapping(value = "/all", produces = "application/json")
     @ResponseBody
-    public List checkJson(){
+    public List<User> getAllList(){
         Iterator<User> allByIdExists = userRepository.findAll().iterator();
         List<User> users = new ArrayList<>();
         while(allByIdExists.hasNext()){

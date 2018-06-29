@@ -15,6 +15,7 @@ public interface UserRepository extends CrudRepository<User, Long> {
     User findUserById(Long id);
     List<User> findUsersByOnline(boolean online);
 
+
     @Transactional
     @Modifying
     @Query("update User u set u.online = :status where u.username = :username")

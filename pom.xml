@@ -71,8 +71,10 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
+            <version>2.0.3.RELEASE</version>
             <scope>test</scope>
         </dependency>
+
 
         <dependency>
             <groupId>commons-codec</groupId>
@@ -84,7 +86,11 @@
             <artifactId>android-json</artifactId>
             <version>0.0.20131108.vaadin1</version>
         </dependency>
-
+        <dependency>
+            <groupId>com.bluecatcode.guava</groupId>
+            <artifactId>guava-19.0-extended</artifactId>
+            <version>1.1.0</version>
+        </dependency>
 
 
     </dependencies>

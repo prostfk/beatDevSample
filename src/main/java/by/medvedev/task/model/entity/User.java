@@ -39,6 +39,15 @@ public class User {
     public User() {
     }
 
+    public User(@Length(min = 4) String username, @Length(min = 4) String mail, String pathToProfilePhoto, @Length(min = 3) String password, boolean online, long lastTimeSeen, String submitPassword) {
+        this.username = username;
+        this.mail = mail;
+        this.pathToProfilePhoto = pathToProfilePhoto;
+        this.password = password;
+        this.online = online;
+        this.lastTimeSeen = lastTimeSeen;
+        this.submitPassword = submitPassword;
+    }
 
     public Long getId() {
         return id;
